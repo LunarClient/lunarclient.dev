@@ -14,6 +14,6 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: deploy.yml
-          repository: LunarClient/lunarclient.dev-Build
+          repo: LunarClient/lunarclient.dev-Build
           inputs: '{"github": ${{ toJson(github) }}}'
           token: ${{ secrets.DISPATCH_TOKEN }}
