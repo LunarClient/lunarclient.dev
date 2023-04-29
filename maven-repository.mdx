@@ -1,4 +1,4 @@
-import { Tab, Tabs } from 'nextra-theme-docs'
+import { Tab, Tabs, Callout } from 'nextra-theme-docs'
 
 # Maven Repository
 
@@ -83,7 +83,11 @@ Artifacts required to build Apollo.
 
 ### Legacy API
 
-API / sample implementations for our _legacy_ Lunar Client API. These are only available for backwards compatibility; all new development should use Apollo, our next-gen API platform.
+<Callout type="warning" emoji="⚠️">
+  These artifacts are only available for backwards compatibility. All new development should use Apollo, our next-gen API platform.
+</Callout>
+
+API / sample implementations for the legacy Lunar Client API. 
 
 - `com.lunarclient:BukkitImpl` (source available at https://github.com/LunarClient/BukkitImpl)
 - `com.lunarclient:bukkitapi` (source available at https://github.com/LunarClient/BukkitAPI)
