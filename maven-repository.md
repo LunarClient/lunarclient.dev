@@ -8,7 +8,7 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at `https:
 
 Maven:
 
-```Maven POM
+```xml filename="pom.xml"
 <repositories>
     <repository>
         <id>lunarclient</id>
@@ -19,7 +19,7 @@ Maven:
 
 Gradle:
 
-```Gradle
+```groovy filename="build.gradle"
 repositories {
     maven {
         name = "lunarclient"
@@ -32,7 +32,7 @@ repositories {
 
 Maven:
 
-```Maven POM
+```xml filename="pom.xml"
 <dependencies>
     <dependency>
         <groupId>com.lunarclient</groupId>
@@ -45,7 +45,7 @@ Maven:
 
 Gradle:
 
-```Gradle
+```groovy filename="build.gradle"
 dependencies {
     compileOnly("com.lunarclient:apollo-api:0.1.0-SNAPSHOT")
 }
