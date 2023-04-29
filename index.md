@@ -1,3 +1,3 @@
 # Welcome
 
-Hello World!
+Welcome to the Lunar Client Documentation.
