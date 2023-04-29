@@ -1,0 +1,19 @@
+name: Deploy Documentation
+on: [push]
+
+jobs:
+  deploy:
+    name: Deploy Documentation
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Trigger workflow dispatch
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.DISPATCH_TOKEN }}
+          repository: LunarClient/lunarclient.dev-Build
+          event-type: deploy
+          client-payload: '{"github": ${{ toJson(github) }}}'
