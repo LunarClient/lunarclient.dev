@@ -1,4 +1,5 @@
-import { Tab, Tabs, Callout } from 'nextra-theme-docs'
+import { Callout } from 'nextra-theme-docs'
+import { SyncedTabs } from "nextra-synced-tabs";
 
 ## Overview
 
@@ -6,8 +7,8 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at https:/
 
 ## Adding the Repository
  
-<Tabs items={['Maven', 'Gradle (Groovy)', 'Gradle (Kotlin)']}>
-  <Tab>
+<SyncedTabs name="packageManager" items={['Maven', 'Gradle (Groovy)', 'Gradle (Kotlin)']}>
+  <SyncedTabs.Tab>
     ```xml filename="pom.xml"
     <repositories>
         <repository>
@@ -16,8 +17,8 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at https:/
         </repository>
     </repositories>
     ```
-  </Tab>
-  <Tab>
+  </SyncedTabs.Tab>
+  <SyncedTabs.Tab>
     ```groovy filename="build.gradle"
     repositories {
         maven {
@@ -26,8 +27,8 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at https:/
         }
     }
     ```
-  </Tab>
-  <Tab>
+  </SyncedTabs.Tab>
+  <SyncedTabs.Tab>
     ```kotlin filename="build.gradle.kts"
     repositories {
         maven {
@@ -36,13 +37,13 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at https:/
         }
     }
     ```
-  </Tab>
-</Tabs>
+  </SyncedTabs.Tab>
+</SyncedTabs>
 
 ## Adding Apollo as a dependency
 
-<Tabs items={['Maven', 'Gradle (Groovy)', 'Gradle (Kotlin)']}>
-  <Tab>
+<SyncedTabs name="packageManager" items={['Maven', 'Gradle (Groovy)', 'Gradle (Kotlin)']}>
+  <SyncedTabs.Tab>
     ```xml filename="pom.xml"
     <dependencies>
         <dependency>
@@ -53,22 +54,22 @@ We offer a public Maven repository for Lunar Client artifacts, hosted at https:/
         </dependency>
     </dependencies>
     ```
-  </Tab>
-  <Tab>
+  </SyncedTabs.Tab>
+  <SyncedTabs.Tab>
     ```groovy filename="build.gradle"
     dependencies {
-        api 'com.lunarclient:apollo-api:0.1.0-SNAPSHOT'
+        compileOnly 'com.lunarclient:apollo-api:0.1.0-SNAPSHOT'
     }
     ```
-  </Tab>
-  <Tab>
+  </SyncedTabs.Tab>
+  <SyncedTabs.Tab>
     ```kotlin filename="build.gradle.kts"
     dependencies {
-        api("com.lunarclient:apollo-api:0.1.0-SNAPSHOT")
+        compileOnly("com.lunarclient:apollo-api:0.1.0-SNAPSHOT")
     }
     ```
-  </Tab>
-</Tabs>
+  </SyncedTabs.Tab>
+</SyncedTabs>
 
 ## Other artifacts
 
