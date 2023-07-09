@@ -10,7 +10,7 @@ jobs:
       contents: read
 
     steps:
-      - name: Trigger workflow dispatch
+      - name: Trigger Documentation Deploy
         uses: moonsworth/actions/deploy-lc-docs@master
         with:
           token: ${{ secrets.DISPATCH_TOKEN }}
