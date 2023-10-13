@@ -42,6 +42,10 @@ Visiting the root of the repository in a web browser will redirect to this page,
 
 ## Adding Apollo as a dependency
 
+<Callout type="warning" emoji="⚠️">
+  The `apollo-extra-adventure` dependency is required if you do not already have a dependency to Adventure. Adventure does not need to be shaded into your plugin.
+</Callout>
+
 <Tabs items={['Maven', 'Gradle (Groovy)', 'Gradle (Kotlin)']}>
   <Tab>
     ```xml filename="pom.xml"
@@ -49,7 +53,14 @@ Visiting the root of the repository in a web browser will redirect to this page,
         <dependency>
             <groupId>com.lunarclient</groupId>
             <artifactId>apollo-api</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- For Adventure support add the following dependency. -->
+        <dependency>
+            <groupId>com.lunarclient</groupId>
+            <artifactId>apollo-extra-adventure4</artifactId>
+            <version>1.0.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -58,14 +69,20 @@ Visiting the root of the repository in a web browser will redirect to this page,
   <Tab>
     ```groovy filename="build.gradle"
     dependencies {
-        compileOnly 'com.lunarclient:apollo-api:0.1.0-SNAPSHOT'
+        compileOnly 'com.lunarclient:apollo-api:1.0.0'
+
+        // For Adventure support add the following dependency.
+        compileOnly 'com.lunarclient:apollo-extra-adventure4:1.0.0'
     }
     ```
   </Tab>
   <Tab>
     ```kotlin filename="build.gradle.kts"
     dependencies {
-        compileOnly("com.lunarclient:apollo-api:0.1.0-SNAPSHOT")
+        compileOnly("com.lunarclient:apollo-api:1.0.0")
+
+        // For Adventure support add the following dependency.
+        compileOnly("com.lunarclient:apollo-extra-adventure4:1.0.0")
     }
     ```
   </Tab>
