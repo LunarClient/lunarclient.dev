@@ -2,9 +2,9 @@ import { Callout, Tab, Tabs } from 'nextra-theme-docs';
 
 # Deep Links
 
-The Lunar Client v3 launcher adds support for deep links, the ability to generate custom urls starting with `lunarclient://`,
+The Lunar Client v3 launcher adds support for deep links, the ability to generate custom URLs starting with `lunarclient://`,
 which will interact directly with the launcher and the user's game. These links can be placed on websites, in Discord, or
-almost anywhere else users have the ability to click on 
+anywhere else users have the ability to click on links.
 
 ## `lunarclient://play` - Connect directly to a Minecraft server
  
@@ -23,10 +23,10 @@ Either `serverId` *or* `serverAddress` must be provided. If `serverId` is provid
 [ServerMappings](https://lunarclient.dev/server-mappings/introduction). If `serverAddress` is provided, the launcher use `serverAddress`
 and `serverPort` to build an IP to connect to. All normal features, such as SRV records, are supported.
 
-`forceRecommendedVersion` will only function if we can determine the recommended version for your server. If a `serverId` was passed in, we
-use the recommended version from its [ServerMappings](https://lunarclient.dev/server-mappings/introduction) entry. If a `serverAddress` was
-provided, and the launcher can associate the `serverAddress` with a [ServerMappings](https://lunarclient.dev/server-mappings/introduction)
-entry, it will use the associated recommended version.
+`forceRecommendedVersion` will only function if the launcher can determine the recommended version for your server. If a `serverId` was
+passed in, the launcher will use the recommended version from its [ServerMappings](https://lunarclient.dev/server-mappings/introduction)
+entry. If a `serverAddress` was provided, and the launcher can associate the `serverAddress` with a
+[ServerMappings](https://lunarclient.dev/server-mappings/introduction) entry, it will use the associated recommended version.
 
 Here's some examples of `play` deep links:
 * <a href="lunarclient://play?serverId=hypixel">`lunarclient://play?serverId=hypixel`</a>
