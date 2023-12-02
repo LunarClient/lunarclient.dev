@@ -1,0 +1,30 @@
+# `lunarclient://play`
+
+## Overview
+This deep link allows you to connect a user directly to a Minecraft server from their web browser. This can be used to create
+a smoother join process compared to the typical flow, where a user has to "Click to copy IP", potentially switch to the correct Minecraft
+version, launch Minecraft, and then paste in the server IP.
+
+## Query Parameters
+* `serverId` - The [ServerMappings](https://lunarclient.dev/server-mappings/introduction) ID of your server.
+* `serverAddress` - The hostname of your server.
+* `serverPort` - The port of your server. Defaults to `25565` if not present.
+* `forceRecommendedVersion` - If the launcher should automatically switch to your recommended version, rather than accepting any
+  supported version. This is suggested if your server is highly optimized for one version of Minecraft. Defaults to `false` if not present.
+
+Either `serverId` *or* `serverAddress` must be provided. If `serverId` is provided, the launcher will automatically connect to the IP defined
+in [ServerMappings](https://lunarclient.dev/server-mappings/introduction). If `serverAddress` is provided, the launcher will use `serverAddress`
+and `serverPort` to build an IP to connect to. All normal features, such as SRV records, are supported.
+
+`forceRecommendedVersion` will only function if the launcher can determine the recommended version for your server. If a `serverId` was
+passed in, the launcher will use the recommended version from its [ServerMappings](https://lunarclient.dev/server-mappings/introduction)
+entry. If a `serverAddress` was provided, and the launcher can associate the `serverAddress` with a
+[ServerMappings](https://lunarclient.dev/server-mappings/introduction) entry, it will use the associated recommended version. Otherwise,
+the option will be ignored.
+
+## Examples
+These are clickable links - click to try it out locally!
+
+* <a href="lunarclient://play?serverId=hypixel">`lunarclient://play?serverId=hypixel`</a>
+* <a href="lunarclient://play?serverAddress=play.hypixel.net">`lunarclient://play?serverAddress=play.hypixel.net`</a>
+* <a href="lunarclient://play?serverAddress=play.hypixel.net&serverPort=25565">`lunarclient://play?serverAddress=play.hypixel.net&serverPort=25565`</a>
