@@ -1,0 +1,23 @@
+import { Callout, Tab, Tabs } from 'nextra-theme-docs';
+
+# Client Brand
+
+Lunar Client can be detected by checking the Minecraft client brand sent to the server. This allows you to detect and track Lunar Client players, if you're unable to use the full
+[Apollo](/apollo/introduction) integration.
+
+<Callout type="warning" emoji="⚠️">
+  This is not a cryptographically secure detection method. Malicious clients can spoof the client brand sent to the server.
+</Callout>
+
+## Brand Format
+
+The client brand will always be in the format `lunarclient:<VERSION>`. `<VERSION>` is the Lunar Client build that the user is running. See the next section for info about the
+version format.
+
+## Version Format
+
+We do not provide any guarantees about the exact format of the version, and it may change without notice. An unexpected version format does not mean that a user is running an
+unofficial build of Lunar Client. The version will be visible on the Minecraft F3 menu, and in the window title, in addition to being present in the client brand.
+
+Most, but not all, users will have a version in the format of `v<MAJOR>.<MINOR>.<PATCH>-<RELEASE YEAR><RELEASE WEEK>`. For example, `v2.12.0-2349` is version `v2.12.0`, which
+was built in the 49th week of 2023.
