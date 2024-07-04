@@ -5,8 +5,5 @@
     "server-mappings": "Server Mappings",
     "deep-links": "Deep Links",
     "client-brand": "Client Brand",
-    "server-partner-program": {
-        "display": "hidden",
-        "hidden": true
-    }
+    "server-partner-program": "Server Partner Program"
 }
