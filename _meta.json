@@ -4,5 +4,8 @@
     "apollo": "Apollo",
     "server-mappings": "Server Mappings",
     "deep-links": "Deep Links",
-    "client-brand": "Client Brand"
+    "client-brand": "Client Brand",
+    "server-partner-program": {
+        "display": "hidden"
+    }
 }
