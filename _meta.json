@@ -6,6 +6,7 @@
     "deep-links": "Deep Links",
     "client-brand": "Client Brand",
     "server-partner-program": {
-        "display": "hidden"
+        "display": "hidden",
+        "hidden": true
     }
 }
