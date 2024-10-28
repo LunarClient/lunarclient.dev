@@ -1,0 +1,33 @@
+# Translation Keys
+
+Lunar Client supports custom translation keys that server owners and in some cases normal resourcepacks can adjust to enhance Lunar Client player's experience. This documentation provides guidelines, formats, and examples to explain how to implement these translation keys.
+
+## Implementation
+
+- **Add Translation Key**:
+    - **_Step 1_**: Find the `en_us.json` file, open it.
+    - **_Step 2_**: Scroll to the bottom and paste in the translation key you want to modify.
+    - **_Step 3_**: Replace the `<namespace>` section with the [namespace](https://minecraft.wiki/w/Resource_location#Namespaces) you want to target.
+    - **_Step 4_**: Modify the `<Id>` section of your key, with the ID of the property you want to target.
+    - **_Step 5_**: Add your translation in the `<translation>` section.
+    - **_Step 6 (Optional)_**: Add color codes! Lunar Client supports the `§` symbol for [Minecraft Color Codes](https://www.lunarclient.com/tools/color-codes) in translation keys.
+- **Ship it!**: Yep, it's that easy!
+
+
+## Modifiable Translation Keys
+
+These are all the current translation keys that can be modified for better Lunar Client integration.
+
+### Biomes
+
+You can customize the names of biomes using the following format:
+
+- **Format**: `biome.<namespace>.<biomeId>`: `<translation>`
+- **Example**: `biome.lunarnetwork.lobby_halloween: §6Halloween Lobby`
+
+### Dimensions
+
+You can customize the dimension names using the following format:
+
+- **Format**: `dimension.<namespace>.<dimensionId>`: `<translation>`
+- **Example**: `dimension.lunarnetwork.nether: §cNether`
